@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     @post.update!(update_params)
-    reder json: @post, status: :ok
+    render json: @post, status: :ok
   end
 
   private
